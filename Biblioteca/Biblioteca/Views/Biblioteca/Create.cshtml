@@ -1,0 +1,52 @@
+﻿@model Prestamos
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+<fieldset>
+    <legend>Categories</legend>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.IdPrestamo)
+    </div>
+    <div class="editor-field">
+        @*Html.EditorFor(model => model.CategoryID)*@
+        @*Html.ValidationMessageFor(model => model.CategoryID)*@
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.IdLibro)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.IdLibro)
+        @Html.ValidationMessageFor(model => model.IdLibro)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.IdUsuario)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.IdUsuario)
+        @Html.ValidationMessageFor(model => model.IdUsuario)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.FecPrestamo)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.FecPrestamo)
+        @Html.ValidationMessageFor(model => model.FecPrestamo)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.FecDevolucion)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.FecDevolucion)
+        @Html.ValidationMessageFor(model => model.FecDevolucion)
+    </div>
+    <p>
+        <input type="submit" value="Create" />
+    </p>
+</fieldset>
+}
